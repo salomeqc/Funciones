@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Funciones Útiles en JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <h1>Nuevas 15 Funciones JS</h1>
+    
+    <!-- 15. Modo Oscuro (Aplicado globalmente arriba) -->
+    <section class="card">
+        <h3>1. Alternar Modo Oscuro</h3>
+        <p>Utiliza el botón al inicio de la página para activar o desactivar la clase CSS global.</p>
+            <button onclick="alternarModoOscuro()">🌙 / ☀️ Cambiar Modo Oscuro</button>
+    </section>
+
+    <!-- 2. Número Mayor -->
+    <section class="card">
+        <h3>2. Número Mayor de 3 Valores</h3>
+        <input type="number" id="numA" placeholder="Número A">
+        <input type="number" id="numB" placeholder="Número B">
+        <input type="number" id="numC" placeholder="Número C">
+        <button onclick="obtenerMayor()">Comparar</button>
+        <p id="res2"></p>
+    </section>
+
+    <!-- 3. Contraseña -->
+    <section class="card">
+        <h3>3. Generador de Contraseña</h3>
+        <button onclick="generarPassword()">Generar de 10 carácteres</button>
+        <p id="res3"></p>
+    </section>
+
+    <!-- 4. Promedio -->
+    <section class="card">
+        <h3>4. Promedio de Notas</h3>
+        <input type="number" id="nota1" placeholder="Nota 1">
+        <input type="number" id="nota2" placeholder="Nota 2">
+        <input type="number" id="nota3" placeholder="Nota 3">
+        <button onclick="calcularPromedio()">Calcular</button>
+        <p id="res4"></p>
+    </section>
+
+    <!-- 5. Tiempo -->
+    <section class="card">
+        <h3>5. Segundos a Minutos:Segundos</h3>
+        <input type="number" id="segundos" placeholder="Segundos totales">
+        <button onclick="convertirTiempo()">Convertir</button>
+        <p id="res5"></p>
+    </section>
+
+    <!-- 6. Vocales -->
+    <section class="card">
+        <h3>6. Contar Vocales</h3>
+        <input type="text" id="textoVocales" placeholder="Escribe un texto">
+        <button onclick="contarVocales()">Contar</button>
+        <p id="res6"></p>
+    </section>
+
+    <!-- 7. IMC -->
+    <section class="card">
+        <h3>7. Calcular IMC</h3>
+        <input type="number" step="0.1" id="peso" placeholder="Peso en kg (ej: 70)">
+        <input type="number" step="0.01" id="altura" placeholder="Altura en metros (ej: 1.75)">
+        <button onclick="calcularIMC()">Calcular</button>
+        <p id="res7"></p>
+    </section>
+
+    <!-- 8. Tabla Multiplicar -->
+    <section class="card">
+        <h3>8. Tabla de Multiplicar</h3>
+        <input type="number" id="numTabla" placeholder="Número">
+        <button onclick="generarTablaMultiplicar()">Generar</button>
+        <pre id="res8"></pre>
+    </section>
+
+    <!-- 9. Bisiesto -->
+    <section class="card">
+        <h3>9. Año Bisiesto</h3>
+        <input type="number" id="anio" placeholder="Ej: 2024">
+        <button onclick="esBisiesto()">Verificar</button>
+        <p id="res9"></p>
+    </section>
+
+    <!-- 10. Agregar Lista -->
+    <section class="card">
+        <h3>10. Lista Dinámica</h3>
+        <input type="text" id="itemLista" placeholder="Nuevo elemento">
+        <button onclick="agregarALista()">Agregar</button>
+        <ul id="listaDinamica"></ul>
+    </section>
+
+    <!-- 11. Copiar Texto -->
+    <section class="card">
+        <h3>11. Copiar Texto</h3>
+        <input type="text" id="textoCopiar" placeholder="Escribe para copiar">
+        <button onclick="copiarTexto()">Copiar</button>
+        <p id="res11"></p>
+    </section>
+
+    <!-- 12. Soles a Dólares -->
+    <section class="card">
+        <h3>12. Soles a Dólares (S/ a $)</h3>
+        <input type="number" id="montoSoles" placeholder="Monto en S/">
+        <button onclick="convertirMoneda()">Convertir</button>
+        <p id="res12"></p>
+    </section>
+
+    <!-- 13. Reemplazar Espacios -->
+    <section class="card">
+        <h3>13. Reemplazar Espacios por Guiones</h3>
+        <input type="text" id="fraseEspacios" placeholder="Mi frase con espacios">
+        <button onclick="reemplazarEspacios()">Convertir</button>
+        <p id="res13"></p>
+    </section>
+
+    <!-- 14. Factorial -->
+    <section class="card">
+        <h3>14. Factorial de un Número</h3>
+        <input type="number" id="numFactorial" placeholder="Número entero">
+        <button onclick="calcularFactorial()">Calcular</button>
+        <p id="res14"></p>
+    </section>
+
+    <!-- 15. Descuento -->
+    <section class="card">
+        <h3>15. Calcular Descuento</h3>
+        <input type="number" id="precio" placeholder="Precio inicial">
+        <input type="number" id="descuento" placeholder="% Descuento">
+        <button onclick="calcularDescuento()">Calcular</button>
+        <p id="res15"></p>
+    </section>
+
+</body>
+</html>

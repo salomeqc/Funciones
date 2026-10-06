@@ -1,0 +1,188 @@
+/* ===================================================
+   VARIABLES DE COLOR (LILA Y FOSFORESCENTES / NEÓN)
+   =================================================== */
+:root {
+    --bg-color: #0d0714;            /* Fondo oscuro profundo para resaltar el neón */
+    --card-bg: #180e28;             /* Tarjetas morado oscuro */
+    --card-border: #7346ef;         /* Borde magenta/lila fosforescente */
+    --text-title: #987df8;          /* Títulos rosa/lila neón brillante */
+    --text-color: #f3e8ff;          /* Texto lila muy claro */
+    --input-bg: #26143e;            /* Fondo de inputs morado medio */
+    --btn-bg: #bd7df8;              /* Botones lila fosforescente */
+    --btn-hover: #895af5;           /* Hover brillante neón */
+    --shadow: 0 0 15px rgba(217, 70, 239, 0.25); /* Resplandor neón */
+}
+
+/* Modo claro neón opcional */
+body.modo-oscuro {
+    --bg-color: #faf5ff;            /* Fondo lila muy claro */
+    --card-bg: #ffffff;             /* Tarjetas blancas */
+    --card-border: #a855f7;         /* Borde lila eléctrico */
+    --text-title: #7e22ce;          /* Títulos violeta vivo */
+    --text-color: #3b0764;          /* Texto oscuro lila */
+    --input-bg: #f3e8ff;            /* Fondo de inputs */
+    --btn-bg: #d8b4fe;              /* Botón lila intenso */
+    --btn-hover: #c084fc;           /* Hover */
+    --shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ===================================================
+   BODY FUNCIONANDO COMO GRID DE TARJETAS
+   =================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 40px 20px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+    gap: 22px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Encabezado principal */
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.3rem;
+    color: var(--text-title);
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
+}
+
+/* ===================================================
+   TARJETAS LILA NEÓN REDONDEADAS
+   =================================================== */
+.card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 20px;
+    padding: 22px 18px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.card:hover {
+    box-shadow: 0 0 22px rgba(217, 70, 239, 0.5);
+}
+
+.card h3 {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: var(--text-title);
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+/* ===================================================
+   INPUTS Y BOTONES FOSFORESCENTES
+   =================================================== */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-align: center;
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: #c084fc;
+    opacity: 0.7;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #f472b6;
+    box-shadow: 0 0 8px rgba(244, 114, 182, 0.6);
+}
+
+button {
+    width: 100%;
+    background-color: var(--btn-bg);
+    color: #1d0347;
+    border: none;
+    padding: 11px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+    box-shadow: 0 0 15px rgba(159, 121, 249, 0.8);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ===================================================
+   RESULTADOS
+   =================================================== */
+p[id^="res"], pre, ul {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #9572f4;
+    word-break: break-word;
+    margin-top: 6px;
+    text-shadow: 0 0 8px rgba(142, 114, 244, 0.4);
+}
+
+pre {
+    background-color: var(--input-bg);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    font-family: monospace;
+    white-space: pre-wrap;
+    width: 100%;
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+ul li {
+    padding: 3px 0;
+    color: var(--text-color);
+    font-weight: normal;
+    border-bottom: 1px dashed var(--card-border);
+}
