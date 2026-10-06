@@ -1,5 +1,6 @@
 // 1. Alternar tema Oscuro / Claro
 function alternarModoOscuro() {
+    // toggle es un método que agrega o quita una clase de un elemento dependiendo de si ya la tiene o no.
     document.body.classList.toggle('modo-oscuro');
 }
 
